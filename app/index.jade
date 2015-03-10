@@ -5,9 +5,15 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     link(rel='stylesheet' href='css/style.css' type='text/css')
-    title Best Reviews
-  body
-    h1 Hello World!
+    title Full Contact
+  body(ng-app='persons')
+    .container(ng-controller='PersonsCtrl')
+      h1 Hello World!
+      
+      form.form-inline
+        input.form-control(type='email' ng-model='searchTerm' placeholder='email of some awesome person')
+        button.btn.btn-primary(ng-click='getURL()') Find Person
+        p {{searchTerm}}
 
     script(type='text/javascript' src='vendor/jquery/dist/jquery.js')
     script(type='text/javascript' src='vendor/lodash/lodash.js')

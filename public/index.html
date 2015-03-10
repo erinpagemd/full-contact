@@ -5,9 +5,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <title>Best Reviews</title>
+    <title>Full Contact</title>
   </head>
-  <body>
-    <h1>Hello World!</h1>
+  <body ng-app="persons">
+    <div ng-controller="PersonsCtrl" class="container">
+      <h1>Hello World!</h1>
+      <form class="form-inline">
+        <input type="email" ng-model="searchTerm" placeholder="email of some awesome person" class="form-control">
+        <button ng-click="getURL()" class="btn btn-primary">Find Person</button>
+        <p>{{searchTerm}}</p>
+      </form>
+    </div>
+    <script type="text/javascript" src="vendor/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="vendor/lodash/lodash.js"></script>
+    <script type="text/javascript" src="vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
