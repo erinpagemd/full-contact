@@ -16,8 +16,8 @@ html
         p {{searchTerm}}
 
       p(ng-model='name') {{name}}
-      ul 
-        li(ng-repeat='website in websites') {{website.url}}
+      ul(ng-repeat='website in websites')
+        li {{website.url}}
       img(ng-repeat='photo in photos' ng-src='{{photo.url}}')
       ul(ng-repeat='profile in profiles')
         li {{profile.type}}

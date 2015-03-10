@@ -1,6 +1,8 @@
-# template
+# full-contact
 
-Using Gulp, Jade, Sass, Bower, Node, Bootstrap
+Use of Full Contact API. More information at https://www.fullcontact.com/developer/docs/person/.
+
+Technologies: Gulp, Jade, Sass, Bower, Node, Bootstrap, Angular
 
 ## Use the following commands:
 ```
