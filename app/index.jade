@@ -15,6 +15,15 @@ html
         button.btn.btn-primary(ng-click='getURL()') Find Person
         p {{searchTerm}}
 
+      p(ng-model='name') {{name}}
+      ul 
+        li(ng-repeat='website in websites') {{website.url}}
+      img(ng-repeat='photo in photos' ng-src='{{photo.url}}')
+      ul(ng-repeat='profile in profiles')
+        li {{profile.type}}
+        li {{profile.url}}
+        li {{profile.username}}
+
     script(type='text/javascript' src='vendor/jquery/dist/jquery.js')
     script(type='text/javascript' src='vendor/lodash/lodash.js')
     script(type='text/javascript' src='vendor/angular/angular.js')

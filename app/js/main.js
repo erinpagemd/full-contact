@@ -11,7 +11,10 @@ angular
 
       $http.get(url)
         .success(function(data) {
-          console.log(data.socialProfiles);
+          $scope.name = data.contactInfo.fullName
+          $scope.websites = data.contactInfo.websites
+          $scope.photos = data.photos
+          $scope.profiles = data.socialProfiles
         })
         .error(function(data) {
           console.log('error in getURL ' + data);

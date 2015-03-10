@@ -15,6 +15,15 @@
         <button ng-click="getURL()" class="btn btn-primary">Find Person</button>
         <p>{{searchTerm}}</p>
       </form>
+      <p ng-model="name">{{name}}</p>
+      <ul> 
+        <li ng-repeat="website in websites">{{website.url}}</li>
+      </ul><img ng-repeat="photo in photos" ng-src="{{photo.url}}">
+      <ul ng-repeat="profile in profiles">
+        <li>{{profile.type}}</li>
+        <li>{{profile.url}}</li>
+        <li>{{profile.username}}</li>
+      </ul>
     </div>
     <script type="text/javascript" src="vendor/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="vendor/lodash/lodash.js"></script>
