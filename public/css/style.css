@@ -4894,7 +4894,7 @@ button.close {
 .thumbnail > img, .thumbnail a > img {
   display: inline-block; }
 
-.navbar-form .form-control {
+.form-inline .form-control {
   width: 75%;
   background-color: #50361b;
   color: #f1c19e; }
@@ -4911,8 +4911,21 @@ button.close {
   font-family: 'Permanent Marker', cursive;
   font-size: 20rem; }
 
-img {
+.imgDiv img {
   margin: 1% 5%; }
+
+.navBrown {
+  background-color: #50361b; }
+  .navBrown p {
+    color: #50361b; }
+
+#social-media {
+  border: 2px dashed red;
+  margin: 1%; }
+
+.container .social-media {
+  border: 2px dashed red;
+  padding: 1% 5%; }
 
 h2 {
   text-align: center;
@@ -4920,7 +4933,12 @@ h2 {
   font-family: 'Permanent Marker', cursive;
   font-size: 5rem; }
 
+h3 {
+  text-align: center; }
+
 body {
   background: linear-gradient(to bottom, #50361b, #e4a46c 100%);
   background-attachment: fixed;
-  color: #f1c19e; }
+  color: #f1c19e;
+  margin-bottom: 50px;
+  padding-top: 70px; }

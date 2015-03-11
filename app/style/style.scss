@@ -15,7 +15,7 @@ $brown: #50361b;
   display: inline-block;
 }
 
-.navbar-form .form-control {
+.form-inline .form-control {
   width: 75%;
   background-color: $brown;
   color: $color1;
@@ -36,10 +36,29 @@ $brown: #50361b;
   font-size: 20rem;
 }
 
-/////////////////HTML ELEMENTS////////////////////////////
-img {
+.imgDiv img {
   margin: 1% 5%;
 }
+
+.navBrown {
+  background-color: $brown;
+
+  p {
+    color: $brown;
+  }
+}
+
+#social-media {
+  border: 2px dashed red;
+  margin: 1%;
+}
+
+.container .social-media {
+  border: 2px dashed red;
+  padding: 1% 5%;
+}
+
+/////////////////HTML ELEMENTS////////////////////////////
 
 h2 {
   text-align: center;
@@ -48,8 +67,14 @@ h2 {
   font-size: 5rem;
 }
 
+h3 {
+  text-align: center;
+}
+
 body {
   background: linear-gradient(to bottom, $brown, $color3 100%);
   background-attachment: fixed;
   color: $color1;
+  margin-bottom: 50px;
+  padding-top: 70px;
 }
