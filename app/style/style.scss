@@ -1,5 +1,55 @@
 @import '../../public/vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
 
-h1 {
-  color: blue;
+$color1 : #f1c19e;
+$color2: #f9c498;
+$color3: #e4a46c;
+$pink: #ed746d;
+$brown: #50361b;
+
+.list-group {
+  display: inline-block;
+}
+
+.thumbnail > img, .thumbnail a > img {
+  display: inline-block;
+}
+
+.navbar-form .form-control {
+  width: 75%;
+  background-color: $brown;
+  color: $color1;
+}
+
+.imgDiv {
+  margin: 1% 20%;
+}
+
+.pink{
+  background-color: $pink;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  color: $brown;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20rem;
+}
+
+/////////////////HTML ELEMENTS////////////////////////////
+img {
+  margin: 1% 5%;
+}
+
+h2 {
+  text-align: center;
+  color: $brown;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 5rem;
+}
+
+body {
+  background: linear-gradient(to bottom, $brown, $color3 100%);
+  background-attachment: fixed;
+  color: $color1;
 }

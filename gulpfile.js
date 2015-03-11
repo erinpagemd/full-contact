@@ -6,9 +6,9 @@ var watch = require('gulp-watch');
 
 //////////WATCH////////////////////////////////////
 gulp.task('watch', function () {
-  gulp.src('./app/')
-    .pipe(watch('./app/'))
-    .pipe(gulp.dest('build'));
+  watch('./app/**/*', function() {
+    gulp.start('build');
+  });
 });
 
 //////////SASS////////////////////////////////////
@@ -23,8 +23,8 @@ gulp.task('sass', function () {
 //////////COPY////////////////////////////////////
 
 gulp.task('copy', function () {
-  gulp.src('./app/js/*.js')
-  .pipe(copy('./public/scripts/', {prefix:2}))
+  gulp.src('./app/**/*.js')
+  .pipe(copy('./public/', {prefix:1}))
 
 });
 

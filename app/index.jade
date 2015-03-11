@@ -8,23 +8,42 @@ html
     title Full Contact
   body(ng-app='persons')
     .container(ng-controller='PersonsCtrl')
-      h1 Hello World!
+      .row
+        .jumbotron.pink
+          h1 STALKER.0
+          p Are you on or off of the radar?
+          p
+            a.btn.btn-primary.btn-lg(href='#' role='button') Find Out
       
-      form.form-inline
-        input.form-control(type='email' ng-model='searchTerm' placeholder='email of some awesome person')
-        button.btn.btn-primary(ng-click='getURL()') Find Person
-        p {{searchTerm}}
+      nav.navbar.navbar-default.pink
+        .contaner-fluid     
+          form.navbar-form(role='search')
+            .form-group.col-md-6
+              input.form-control(type='email' ng-model='searchTerm' placeholder='email of some awesome person')
+              button.btn.btn-warning(ng-click='getURL()') Find Email
+              p {{searchTerm}}
 
-      p(ng-model='name') {{name}}
-      ul(ng-repeat='website in websites')
-        li {{website.url}}
-      img(ng-repeat='photo in photos' ng-src='{{photo.url}}')
-      ul(ng-repeat='profile in profiles')
-        li {{profile.type}}
-        li {{profile.url}}
-        li {{profile.username}}
+      .row
+        h2(ng-model='name') {{name}}
+        
+      .row
+        .thumbnail.pink
+          .imgDiv
+            img(ng-repeat='photo in photos' ng-src='{{photo.url}}')
+          
+      .row
+        ul.list-group(ng-repeat='website in websites') 
+          li.list-group-item.pink
+            a(href='{{website.url}}') {{website.url}}
+      
+      .row
+        ul.list-group(ng-repeat='profile in profiles')
+          li.pink.list-group-item {{profile.type}}
+          li.pink.list-group-item {{profile.url}}
+          li.pink.list-group-item {{profile.username}}
 
     script(type='text/javascript' src='vendor/jquery/dist/jquery.js')
     script(type='text/javascript' src='vendor/lodash/lodash.js')
     script(type='text/javascript' src='vendor/angular/angular.js')
-    script(type='text/javascript' src='scripts/main.js')
+    script(type='text/javascript' src='js/main.js')
+    script(type='text/javascript' src='models/user.js')

@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -4887,5 +4888,39 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-h1 {
-  color: blue; }
+.list-group {
+  display: inline-block; }
+
+.thumbnail > img, .thumbnail a > img {
+  display: inline-block; }
+
+.navbar-form .form-control {
+  width: 75%;
+  background-color: #50361b;
+  color: #f1c19e; }
+
+.imgDiv {
+  margin: 1% 20%; }
+
+.pink {
+  background-color: #ed746d; }
+
+.jumbotron h1 {
+  text-align: center;
+  color: #50361b;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20rem; }
+
+img {
+  margin: 1% 5%; }
+
+h2 {
+  text-align: center;
+  color: #50361b;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 5rem; }
+
+body {
+  background: linear-gradient(to bottom, #50361b, #e4a46c 100%);
+  background-attachment: fixed;
+  color: #f1c19e; }
