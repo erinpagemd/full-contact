@@ -16,20 +16,22 @@
       </div>
     </nav>
     <div ng-controller="PersonsCtrl" class="container">
-      <div class="row">
-        <div class="jumbotron pink">
-          <h1>STALKER.0</h1>
-          <p>Are you on or off of the radar?    </p>
-          <form role="search" class="form-inline">
-            <div class="col-md-6">
-              <input type="email" ng-model="searchTerm" placeholder="email of some awesome person" class="form-control">
-              <button aria-hidden="true" ng-click="getURL()" class="btn btn-warning">Find Email</button>
-              <p>{{searchTerm}}</p>
-            </div>
-          </form>
+      <div class="container">
+        <div class="row">
+          <div class="jumbotron pink">
+            <h1>STALKER.0</h1>
+            <p>Are you on or off of the radar?    </p>
+            <form role="search" class="form-inline">
+              <div class="col-md-6">
+                <input type="email" ng-model="searchTerm" placeholder="email of some awesome person" class="form-control">
+                <button ng-click="getURL()" class="btn btn-warning">Find Email</button>
+                <p>{{searchTerm}}</p>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="container infoDiv">
+      <div class="container resultsDiv">
         <div class="row">
           <h2 ng-model="name">{{name}}</h2>
         </div>
@@ -56,6 +58,9 @@
             </ul>
           </div>
         </div>
+      </div>
+      <div class="container belowDiv">
+        <h3>{{searchTerm}} is currently OFF the radar...</h3><img src="images/radar.jpg">
       </div>
     </div>
     <script type="text/javascript" src="vendor/jquery/dist/jquery.js"></script>

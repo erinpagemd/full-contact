@@ -15,17 +15,18 @@ html
           p.navbar-text Stalker.0 
     
     .container(ng-controller='PersonsCtrl')
-      .row
-        .jumbotron.pink
-          h1 STALKER.0
-          p Are you on or off of the radar?    
-          form.form-inline(role='search')
-            .col-md-6
-              input.form-control(type='email' ng-model='searchTerm' placeholder='email of some awesome person')
-              button.btn.btn-warning(aria-hidden='true' ng-click='getURL()') Find Email
-              p {{searchTerm}}
+      .container
+        .row
+          .jumbotron.pink
+            h1 STALKER.0
+            p Are you on or off of the radar?    
+            form.form-inline(role='search')
+              .col-md-6
+                input.form-control(type='email' ng-model='searchTerm' placeholder='email of some awesome person')
+                button.btn.btn-warning(ng-click='getURL()') Find Email
+                p {{searchTerm}}
 
-      .container.infoDiv
+      .container.resultsDiv
         .row
           h2(ng-model='name') {{name}}
           
@@ -49,6 +50,11 @@ html
               li.pink.list-group-item
                 a(href='{{profile.url}}') {{profile.url}}
               li.pink.list-group-item Handle: {{profile.username}}
+
+      .container.belowDiv
+        h3 {{searchTerm}} is currently OFF the radar...
+        img(src='images/radar.jpg')
+        
 
     script(type='text/javascript' src='vendor/jquery/dist/jquery.js')
     script(type='text/javascript' src='vendor/lodash/lodash.js')
