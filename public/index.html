@@ -29,28 +29,32 @@
           </form>
         </div>
       </div>
-      <div class="row">
-        <h2 ng-model="name">{{name}}</h2>
-      </div>
-      <div class="row">
-        <div class="thumbnail pink">
-          <div class="imgDiv"><img ng-repeat="photo in photos" ng-src="{{photo.url}}"></div>
+      <div class="container infoDiv">
+        <div class="row">
+          <h2 ng-model="name">{{name}}</h2>
         </div>
-      </div>
-      <div class="row">
-        <h3>Websites</h3>
-        <ul ng-repeat="website in websites" class="list-group"> 
-          <li class="list-group-item pink"><a href="{{website.url}}">{{website.url}}</a></li>
-        </ul>
-      </div>
-      <div class="row">
-        <h3>Social Media</h3>
-        <div class="container social-media">
-          <ul id="social-media" ng-repeat="profile in profiles" class="list-group">
-            <li class="pink list-group-item">{{profile.type | uppercase}}</li>
-            <li class="pink list-group-item">{{profile.url}}</li>
-            <li class="pink list-group-item">Handle: {{profile.username}}</li>
-          </ul>
+        <div class="row">
+          <div class="thumbnail pink">
+            <div class="imgDiv"><img ng-repeat="photo in photos" ng-src="{{photo.url}}"></div>
+          </div>
+        </div>
+        <div class="row">
+          <h3>Websites</h3>
+          <div class="container websites">
+            <ul ng-repeat="website in websites" class="list-group"> 
+              <li class="list-group-item pink"><a href="{{website.url}}">{{website.url}}</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <h3>Social Media</h3>
+          <div class="container social-media">
+            <ul id="social-media" ng-repeat="profile in profiles" class="list-group">
+              <li id="smlabel" class="pink list-group-item">{{profile.type | uppercase}}</li>
+              <li class="pink list-group-item"><a href="{{profile.url}}">{{profile.url}}</a></li>
+              <li class="pink list-group-item">Handle: {{profile.username}}</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

@@ -4920,12 +4920,18 @@ button.close {
     color: #50361b; }
 
 #social-media {
-  border: 2px dashed red;
   margin: 1%; }
 
 .container .social-media {
-  border: 2px dashed red;
-  padding: 1% 5%; }
+  padding: 1% 5%;
+  text-align: center; }
+
+.container .websites {
+  text-align: center; }
+
+#smlabel {
+  text-align: center;
+  color: #50361b; }
 
 h2 {
   text-align: center;

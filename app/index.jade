@@ -25,27 +25,30 @@ html
               button.btn.btn-warning(aria-hidden='true' ng-click='getURL()') Find Email
               p {{searchTerm}}
 
-      .row
-        h2(ng-model='name') {{name}}
-        
-      .row
-        .thumbnail.pink
-          .imgDiv
-            img(ng-repeat='photo in photos' ng-src='{{photo.url}}')
+      .container.infoDiv
+        .row
+          h2(ng-model='name') {{name}}
           
-      .row
-        h3 Websites
-        ul.list-group(ng-repeat='website in websites') 
-          li.list-group-item.pink
-            a(href='{{website.url}}') {{website.url}}
-      
-      .row
-        h3 Social Media
-        .container.social-media
-          ul#social-media.list-group(ng-repeat='profile in profiles')
-            li.pink.list-group-item {{profile.type | uppercase}}
-            li.pink.list-group-item {{profile.url}}
-            li.pink.list-group-item Handle: {{profile.username}}
+        .row
+          .thumbnail.pink
+            .imgDiv
+              img(ng-repeat='photo in photos' ng-src='{{photo.url}}')
+            
+        .row
+          h3 Websites
+          .container.websites
+            ul.list-group(ng-repeat='website in websites') 
+              li.list-group-item.pink
+                a(href='{{website.url}}') {{website.url}}
+        
+        .row
+          h3 Social Media
+          .container.social-media
+            ul#social-media.list-group(ng-repeat='profile in profiles')
+              li#smlabel.pink.list-group-item {{profile.type | uppercase}}
+              li.pink.list-group-item
+                a(href='{{profile.url}}') {{profile.url}}
+              li.pink.list-group-item Handle: {{profile.username}}
 
     script(type='text/javascript' src='vendor/jquery/dist/jquery.js')
     script(type='text/javascript' src='vendor/lodash/lodash.js')
