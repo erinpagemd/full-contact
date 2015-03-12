@@ -20,6 +20,6 @@ angular
       $urlRouterProvider.otherwise('/');
 
       $stateProvider
-        .state('home', {url:'/', templateUrl:'/views/home.html'})
-        .state('search', {url:'/search', templateUrl:'/views/search.html', controller:'SearchCtrl'});
+        .state('home', {url:'/', templateUrl:'/public/views/home.html'})
+        .state('search', {url:'/search', templateUrl:'/public/views/search.html', controller:'SearchCtrl'});
     });

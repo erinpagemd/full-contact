@@ -27,7 +27,7 @@
     <div class="row">
       <h3>Websites</h3>
       <div class="container websites">
-        <ul ng-repeat="website in websites" class="list-group"> 
+        <ul ng-repeat="website in websites" class="list-group">
           <li class="list-group-item pink"><a href="{{website.url}}">{{website.url}}</a></li>
         </ul>
       </div>
@@ -46,6 +46,6 @@
   <div ng-show="!isGood &amp;&amp; !isFresh" class="container belowDiv">
     <h3>{{searchTerm}} is currently OFF the radar...
       <button class="btn btn-warning">Try Again</button>
-    </h3><img src="images/radar.jpg">
+    </h3><img src="public/images/radar.jpg">
   </div>
 </div>
