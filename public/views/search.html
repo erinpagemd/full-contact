@@ -1,0 +1,51 @@
+
+<div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron pink">
+        <h1>STALKER.0</h1>
+        <p>Are you on or off of the radar?    </p>
+        <form role="search" class="form-inline">
+          <div class="col-md-6">
+            <input type="email" ng-model="searchTerm" placeholder="email of some awesome person" class="form-control">
+            <button ng-click="getURL()" class="btn btn-warning">Find Email</button>
+            <p>{{searchTerm}}</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div ng-show="isGood &amp;&amp; !isFresh" class="container resultsDiv">
+    <div class="row">
+      <h2 ng-model="name">{{name}}</h2>
+    </div>
+    <div class="row">
+      <div class="thumbnail pink">
+        <div class="imgDiv"><img ng-repeat="photo in photos" ng-src="{{photo.url}}"></div>
+      </div>
+    </div>
+    <div class="row">
+      <h3>Websites</h3>
+      <div class="container websites">
+        <ul ng-repeat="website in websites" class="list-group"> 
+          <li class="list-group-item pink"><a href="{{website.url}}">{{website.url}}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <h3>Social Media</h3>
+      <div class="container social-media">
+        <ul id="social-media" ng-repeat="profile in profiles" class="list-group">
+          <li id="smlabel" class="pink list-group-item">{{profile.type | uppercase}}</li>
+          <li class="pink list-group-item"><a href="{{profile.url}}">{{profile.url}}</a></li>
+          <li class="pink list-group-item">Handle: {{profile.username}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div ng-show="!isGood &amp;&amp; !isFresh" class="container belowDiv">
+    <h3>{{searchTerm}} is currently OFF the radar...
+      <button class="btn btn-warning">Try Again</button>
+    </h3><img src="images/radar.jpg">
+  </div>
+</div>

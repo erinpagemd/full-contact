@@ -1,4 +1,4 @@
-angular.module('persons')
+angular.module('stalker')
 .factory('User', function($http){
 
   function getUser(email){

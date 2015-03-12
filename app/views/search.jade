@@ -1,0 +1,41 @@
+.container
+  .container
+    .row
+      .jumbotron.pink
+        h1 STALKER.0
+        p Are you on or off of the radar?    
+        form.form-inline(role='search')
+          .col-md-6
+            input.form-control(type='email' ng-model='searchTerm' placeholder='email of some awesome person')
+            button.btn.btn-warning(ng-click='getURL()') Find Email
+            p {{searchTerm}}
+
+  .container.resultsDiv(ng-show='isGood && !isFresh')
+    .row
+      h2(ng-model='name') {{name}}
+      
+    .row
+      .thumbnail.pink
+        .imgDiv
+          img(ng-repeat='photo in photos' ng-src='{{photo.url}}')
+        
+    .row
+      h3 Websites
+      .container.websites
+        ul.list-group(ng-repeat='website in websites') 
+          li.list-group-item.pink
+            a(href='{{website.url}}') {{website.url}}
+    
+    .row
+      h3 Social Media
+      .container.social-media
+        ul#social-media.list-group(ng-repeat='profile in profiles')
+          li#smlabel.pink.list-group-item {{profile.type | uppercase}}
+          li.pink.list-group-item
+            a(href='{{profile.url}}') {{profile.url}}
+          li.pink.list-group-item Handle: {{profile.username}}
+
+  .container.belowDiv(ng-show='!isGood && !isFresh')
+    h3 {{searchTerm}} is currently OFF the radar...
+      button.btn.btn-warning Try Again
+    img(src='images/radar.jpg')

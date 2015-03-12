@@ -31,7 +31,7 @@ gulp.task('copy', function () {
 //////////JADE////////////////////////////////////
 
 gulp.task('jade', function() {
-  gulp.src('./app/*.jade')
+  gulp.src('./app/**/*.jade')
     .pipe(jade({pretty: true, doctype: 'html'}))
     .on('error', console.error.bind(console))
     .pipe(gulp.dest('./public/'))
